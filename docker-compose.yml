@@ -10,7 +10,7 @@ networks:
 
 services:
   prometheus:
-    image: prom/prometheus:v2.0.0
+    image: prom/prometheus
     volumes:
       - ./prometheus/:/etc/prometheus/
       - prometheus_data:/prometheus
@@ -61,10 +61,10 @@ services:
     tty: true
     stdin_open: true
     expose:
-      - 9696
+      - 9112
     ports:
-      - 9696:9696
-    image: stefanwalther/speedtest-exporter
+      - 9112:9112
+    image: shrunbr/speedtest-exporter-arm
     restart: always
     networks:
       - back-tier

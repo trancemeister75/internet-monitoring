@@ -27,14 +27,12 @@ scrape_configs:
     static_configs:
          - targets: ['localhost:9090']
 
-
-  - job_name: 'speedtest'
-    metrics_path: /metrics
+  - job_name: 'speedtest-metrics'
     scrape_interval: 15m
     scrape_timeout: 60s # running speedtest needs time to complete
     
     static_configs:
-      - targets: ['speedtest:9696']
+      - targets: ['homenas.local:9112']
 
   - job_name: 'ping'
     metrics_path: /probe
@@ -72,5 +70,5 @@ scrape_configs:
 
   - job_name: 'sonos'
     static_configs:
-    - targets: ['192.168.1.42:1915']
+    - targets: ['192.168.0.15:1915']
     

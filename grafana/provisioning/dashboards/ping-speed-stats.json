@@ -80,7 +80,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "speedtest_bits_per_second{direction=\"downstream\"}",
+          "expr": "speedtest_download",
           "format": "time_series",
           "intervalFactor": 1,
           "refId": "A"
@@ -160,7 +160,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "speedtest_bits_per_second{direction=\"upstream\"}",
+          "expr": "speedtest_upload",
           "format": "time_series",
           "intervalFactor": 1,
           "refId": "A"
